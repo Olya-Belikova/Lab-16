@@ -7,26 +7,7 @@ namespace lab_16
 {
     class Program
     {
-        /* private static void CreateArray(int[] a, int n1) //Функция по заполнению массива
-        {
-            Random r = new Random();
-            for (int i = 0; i < n1; i++)
-            {
-                a[i] = r.Next(10);
-                Console.Write("{0} ", a[i]);
-            }
-        }
-        private static void ShowArray(int[] a, int n1) //Выводит массив в порядке A1, AN , A2, AN−1, A3, AN−2...
-        {
-            int n = n1 - 1;
-            for (int i = 0; i < n1; i++)
-            {
-                Console.Write("{0} ", a[i]);
-                Console.Write("{0} ", a[n]);
-                n--;
-            }
-        }
-        */
+
         static void Main(string[] args)
         {
             /*
@@ -76,14 +57,25 @@ namespace lab_16
             */
 
             /*
-            Console.WriteLine("№4. Дан массив A размера N. Вывести его элементы в следующем порядке: A1, AN , A2, AN - 1, A3, AN - 2,");
+            Console.WriteLine("№4. Дан массив A размера N. Вывести его элементы в следующем порядке: A1, AN , A2, AN - 1, A3, AN - 2...");
             Console.Write("N = ");
             int n1 = Convert.ToInt32(Console.ReadLine());
             int[] a = new int[n1];
-            CreateArray(a, n1); //Обращение к функции по заполнению массива
+            Random r = new Random();
+            for (int i = 0; i < n1; i++)
+            {
+                a[i] = r.Next(10);
+                Console.Write("{0} ", a[i]);
+
+            }
             Console.WriteLine();
-            ShowArray(a, n1);
-            Console.ReadKey();
+            int n = n1 - 1;
+            for (int i = 0; i < n1; i++)
+            {
+                Console.Write("{0} ", a[i]);
+                Console.Write("{0} ", a[n]);
+                n--;
+            }
             */
 
             /*
@@ -96,7 +88,7 @@ namespace lab_16
             int[] a = new int[n];
             Random r = new Random();
             for (int j = 0; j < n; j++)
-                a[j] = r.Next(-100, 101);
+                a[j] = r.Next(10);
             Console.WriteLine("Нечетные номера в порядке возрастания:");
             for (int i = 1; i <= n; i += 2)
             {
@@ -109,6 +101,9 @@ namespace lab_16
             }
             Console.ReadKey();
             */
+
+
         }
     }
 }
+
